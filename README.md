@@ -1,6 +1,6 @@
 # README: Nippon Rice Data Extraction
 
-It extracts structured tables from monthly Japanese rice market PDF reports covering Jan 2017 to Nov 2025.
+This project extracts structured tables from monthly Japanese rice market PDF reports covering Jan 2017 to Nov 2025.
 
 For each PDF, we aim to extract four table types:
 - Ex-ante contract (事前契約)
@@ -8,20 +8,21 @@ For each PDF, we aim to extract four table types:
 - Actual sales (産地別契約・販売状況)
 - Inventory (産地別民間在庫の推移)
 
-The data is automatically downloaded from: https://www.maff.go.jp/j/seisan/keikaku/soukatu/mr.html.
+The source PDFs are from:
+https://www.maff.go.jp/j/seisan/keikaku/soukatu/mr.html
 
 ## Repository Structure
 
-The project root folder is NP_Rice_Extraction. Raw PDFs are stored under raw_data:
-
 ```
-NP_Rice_Extraction/
+NP_Rice/
 raw_data/
-2017/
-Jan2017.pdf, Feb2017.pdf, ...
-...
-2025/
-... up to Nov2025.pdf
+  2017/
+    Jan2017.pdf, Feb2017.pdf, ...
+  ...
+  2025/
+    ... up to Nov2025.pdf
+Results/
+  (extracted XLSX outputs)
 ```
 
 ## General Extraction Mechanism
@@ -43,18 +44,15 @@ Some PDFs contain notes or extra numbers near the bottom of the page. In certain
 
 Recommendation: manually verify outputs by comparing the last row in the extracted table against the corresponding PDF page.
 
-## Single-PDF Debug
-
-These scripts are intended for testing extraction on one specific PDF (useful for debugging and parameter tuning):
-- price_test.py
-- actual_sales.py
-- inventory.py
-
 ## Price Extraction
 
-Script: full_price_exraction.py
+Script: full_price_extraction.py
 - Batch extracts tables whose title starts with 相対取引価格・数量.
-- Output: one XLSX per PDF:
+- Outputs one XLSX per PDF, named price_{pdf_stem}.xlsx.
+
+Note: this script currently uses absolute paths for RAW_ROOT and OUT_DIR. Update those paths before running.
+
+Example output naming:
 
 ```
 raw_data/2017/Jan2017.pdf
@@ -66,24 +64,23 @@ price/price_Jan2017.xlsx
 
 ## Inventory Extraction
 
-Scripts:
-- full_inventory_extraction.py (normal cases)
-- inventory_splitted.py (special cases: a single page contains two split inventory tables)
-
-The split-table months are:
-
-Sep2020, Oct2020, Nov2020, Dec2020, Jan2021, Feb2021,
-Sep2021, Oct2021, Nov2021, Dec2021, Jan2022, Feb2022,
-Sep2022, Oct2022, Nov2022, Dec2022, Jan2023, Feb2023
+Script: full_inventory_extraction.py
+- Batch extracts inventory tables with title keyword 産地別民間在庫の推移.
+- Writes outputs to inventory_new1/ (plus debug/ and debug_images/).
+- Logic is designed for PDFs AFTER Feb 2022 (see script header).
 
 ## Actual Sales Extraction
 
 Script: full_actual_sales.py
 - Batch extraction for the “actual sales” table across PDFs.
 - Uses the same keyword-based anchor mechanism + pdfplumber table parsing.
+- Writes outputs to actual_sales1/.
 
 ## Ex-ante Contract Extraction (Claude-assisted)
 
-Script: claude_extraction.py
+Script: claude_ec_extraction.py
 - Ex-ante contract is the main exception to the standard pipeline, as the format of this table varies considerably from year to year.
-- Table structuring is performed via the Claude API to obtain the full table when formats differ substantially across PDFs.
+- This script reads images under exante_conract/ and uses the Claude API to return a table as JSON, then exports to Excel.
+- Outputs are written to ec_claude/.
+
+Note: set your Anthropic key and model via environment variables as required by the script.
