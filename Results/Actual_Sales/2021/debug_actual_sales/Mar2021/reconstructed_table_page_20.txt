@@ -1,0 +1,9 @@
+PDF: /Users/jackey/NUS Dropbox/Zeqi Chen/Tiffany/raw_data/2021/Mar2021.pdf
+Title page: 17 | Table start page: 18
+Parsing page: 20 (crop_right_ratio=0.65)
+Numeric centers (xc): (210.0, 260.0, 330.0)
+label | pref_hit | zenkoku_hit | brand | nums_by_x (decimals, 全国 allows ints)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+３政府備蓄米の都道府県別買入数量、優先枠及び買入入 |  |  | ３政府備蓄米の都道府県別買入数量、優先枠及び買入入 | 
+令和３年産 |  |  | 令和３年産 | 
+契約 |  |  | 契約 | 

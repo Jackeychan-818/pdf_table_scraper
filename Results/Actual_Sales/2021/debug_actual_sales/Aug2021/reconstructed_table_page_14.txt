@@ -1,0 +1,62 @@
+PDF: /Users/jackey/NUS Dropbox/Zeqi Chen/Tiffany/raw_data/2021/Aug2021.pdf
+Title page: 11 | Table start page: 12
+Parsing page: 14 (crop_right_ratio=0.65)
+Numeric centers (xc): (210.0, 260.0, 330.0)
+label | pref_hit | zenkoku_hit | brand | nums_by_x (decimals, 全国 allows ints)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+３政府備蓄米の都道府県別買入数量、優先枠及び買入入 |  |  | ３政府備蓄米の都道府県別買入数量、優先枠及び買入入 | 
+令和３年産 |  |  | 令和３年産 | 
+買入対象米穀 |  |  | 買入対象米穀 | 
+の産地 |  |  | の産地 | 
+北海道 | 北海道 |  | general | 
+青森 | 青森 |  | general | 
+岩手 | 岩手 |  | general | 
+宮城 | 宮城 |  | general | 
+秋田 | 秋田 |  | general | 
+山形 | 山形 |  | general | 
+福島 | 福島 |  | general | 
+茨城 | 茨城 |  | general | 
+栃木 | 栃木 |  | general | 
+群馬 | 群馬 |  | general | 
+埼玉 | 埼玉 |  | general | 
+千葉 | 千葉 |  | general | 
+東京 | 東京 |  | general | 
+神奈川 | 神奈川 |  | general | 
+新潟 | 新潟 |  | general | 
+富山 | 富山 |  | general | 
+石川 | 石川 |  | general | 
+福井 | 福井 |  | general | 
+山梨 | 山梨 |  | general | 
+長野 | 長野 |  | general | 
+岐阜 | 岐阜 |  | general | 
+静岡 | 静岡 |  | general | 
+愛知 | 愛知 |  | general | 
+三重 | 三重 |  | general | 
+滋賀 | 滋賀 |  | general | 
+京都 | 京都 |  | general | 
+大阪 | 大阪 |  | general | 
+兵庫 | 兵庫 |  | general | 
+奈良 | 奈良 |  | general | 
+和歌山 | 和歌山 |  | general | 
+鳥取 | 鳥取 |  | general | 
+島根 | 島根 |  | general | 
+岡山 | 岡山 |  | general | 
+広島 | 広島 |  | general | 
+山口 | 山口 |  | general | 
+徳島 | 徳島 |  | general | 
+香川 | 香川 |  | general | 
+愛媛 | 愛媛 |  | general | 
+高知 | 高知 |  | general | 
+福岡 | 福岡 |  | general | 
+佐賀 | 佐賀 |  | general | 
+長崎 | 長崎 |  | general | 
+熊本 | 熊本 |  | general | 
+大分 | 大分 |  | general | 
+宮崎 | 宮崎 |  | general | 
+鹿児島 | 鹿児島 |  | general | 
+沖縄 | 沖縄 |  | general | 
+都道府県別枠計 |  |  | 都道府県別枠計 | 
+指定なし |  |  | 指定なし | 
+合計 |  |  | 合計 | 
+うちCPTPP分 |  |  | うちCPTPP分 | 
+契約 |  |  | 契約 | 

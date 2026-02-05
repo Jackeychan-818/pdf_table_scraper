@@ -1,0 +1,6 @@
+Title page (1-based): 41
+Scan forward pages (1-based): 41..43
+
+Page 41: has_signals=True, pref_hits=17
+
+==> Chosen table start page: 41

@@ -1,0 +1,8 @@
+Title page (1-based): 29
+Scan forward pages (1-based): 29..31
+
+Page 29: has_signals=True, pref_hits=0
+Page 30: has_signals=True, pref_hits=1
+Page 31: has_signals=True, pref_hits=0
+
+==> Fallback table start page: 29
